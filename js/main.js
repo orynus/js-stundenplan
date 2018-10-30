@@ -49,7 +49,7 @@ $('#prev-week').on('click', function() {
 
 // Holt alle Berufe und stellt sie in Select dar
 function getBerufe() {
-	$.getJSON("http://sandbox.gibm.ch/berufe.php")
+	$.getJSON("https://sandbox.gibm.ch/berufe.php")
 		.done(function(data) {
 			// Selectbox vorbereiten
 			$('#berufs-select').empty();
@@ -72,7 +72,7 @@ function getBerufe() {
 
 // Holt alle Klassen des ausgewählten Berufs und stellt sie in Select dar
 function getKlassen(beruf_id) {
-	$.getJSON("http://sandbox.gibm.ch/klassen.php?beruf_id=" + beruf_id)
+	$.getJSON("https://sandbox.gibm.ch/klassen.php?beruf_id=" + beruf_id)
 		.done(function(data) {
 			// Selectbox vorbereiten
 			$('#klasse-select').empty();
@@ -101,7 +101,7 @@ function getKlassen(beruf_id) {
 
 // Holt Stundenplan für ausgewählte Woche und stellt ihn in Tabelle dar.
 function getTafel(klasse_id, week, year) {
-	$.getJSON("http://sandbox.gibm.ch/tafel.php?klasse_id=" + klasse_id + "&woche=" + week + "-" + year)
+	$.getJSON("https://sandbox.gibm.ch/tafel.php?klasse_id=" + klasse_id + "&woche=" + week + "-" + year)
 		.done(function(data) {
 			$('table tbody').empty();
 			// Tabelle befüllen
