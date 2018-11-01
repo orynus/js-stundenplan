@@ -49,7 +49,7 @@ $('#prev-week').on('click', function() {
 
 // Holt alle Berufe und stellt sie in Select dar
 function getBerufe() {
-	$.getJSON("https://sandbox.gibm.ch/beruf.php")
+	$.getJSON("https://sandbox.gibm.ch/berufe.php")
 		.done(function(data) {
 			// Selectbox vorbereiten
 			$('#berufs-select').empty();
